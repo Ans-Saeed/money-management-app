@@ -3,6 +3,7 @@ const morgan = require('morgan')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
+const userRouter = require('./routers/userRoute')
 
 const app = express()
 app.use(morgan('dev'))
@@ -10,6 +11,9 @@ app.use(cors())
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+
+//for registration route
+app.use('api/users', userRouter)
 
 
 app.get('/', (req, res) => {
