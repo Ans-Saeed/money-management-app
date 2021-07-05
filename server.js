@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 //for registration route
-app.use('api/users', userRouter)
+app.use('/api/users', userRouter)
 
 
 app.get('/', (req, res) => {
