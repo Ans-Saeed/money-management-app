@@ -1,5 +1,6 @@
 import React from 'react'
 import { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class Register extends Component {
 
@@ -77,7 +78,8 @@ class Register extends Component {
                                 onChange={this.changeHandler}
                             />
                         </div>
-                        <button className='btn btn-success m-3'>Register</button>
+                        <Link to='/login' className='text-decoration-none m-3'>Already Have Account? Login Hare</Link>
+                        <button className='btn btn-success m-3 my-3 d-block'>Register</button>
                     </form>
                 </div>
             </div>
