@@ -1,6 +1,8 @@
 import React from 'react'
 import { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { register } from '../store/actions/authAction'
 
 class Register extends Component {
 
@@ -19,6 +21,9 @@ class Register extends Component {
     }
     submitHandler = event => {
         event.preventDefault()
+        let { name, email, password, confirmPassword } = this.state
+        this.props.register({ name, email, password, confirmPassword })
+
     }
     render() {
         let { name, email, password, confirmPassword, error } = this.state
@@ -88,4 +93,4 @@ class Register extends Component {
 }
 
 
-export default Register
+export default connect(null, { register })(Register)
