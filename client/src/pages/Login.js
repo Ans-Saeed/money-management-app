@@ -21,7 +21,7 @@ class Login extends Component {
     }
 
     render() {
-        let { name, email, password } = this.state
+        let { email, password } = this.state
         return (
             <div className='row'>
                 <div className='col-md-6 offset-md-3 '>
