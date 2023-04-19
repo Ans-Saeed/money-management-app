@@ -9,6 +9,7 @@ const init = {
 
 const authReducer = (state = init, action) => {
     switch (action.type) {
+
         case Types.SET_USER: {
             return {
                 user: action.payload.user,
@@ -22,6 +23,9 @@ const authReducer = (state = init, action) => {
                 ...state,
                 error: action.payload.error
             }
+        }
+        default: {
+            return state;
         }
     }
 }

@@ -1,6 +1,6 @@
 //Axious is need for communicated the server
 import Axios from 'axios'
-import * as Types from './types'
+// import * as Types from './types'
 
 
 //we using the thunk library for using assinconus task

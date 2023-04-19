@@ -26,7 +26,7 @@ class Register extends Component {
 
     }
     render() {
-        let { name, email, password, confirmPassword, error } = this.state
+        let { name, email, password, confirmPassword } = this.state
         return (
             <div className='row'>
                 <div className='col-md-6 offset-md-3'>
